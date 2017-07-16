@@ -1,0 +1,5 @@
+package: "github.com/the-gigi/book-tracker-service"
+import:
+- package: github.com/jmoiron/sqlx
+testImport:
+- package: github.com/onsi/gomega
