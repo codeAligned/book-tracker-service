@@ -10,20 +10,20 @@ type Book struct {
 
 
 type Category struct {
-	name string
+	Name string
 }
 
 
 type SalesRank struct {
-	book *Book
-	category *Category
-	rank int
-	timstamp time.Time
-	change int
+	Book *Book
+	Category *Category
+	Rank int
+	Timstamp time.Time
+	Change int
 }
 
 type PotentialSale struct {
-	book *Book
-	timstamp time.Time
-	averageChange int
+	Book *Book
+	Timstamp time.Time
+	AverageChange int
 }
