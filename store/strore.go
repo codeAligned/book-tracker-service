@@ -64,6 +64,26 @@ func getConnectionInfo(conf Config) (driver string, connectionString string, err
 }
 
 
+func (db *DB) init() error {
+	err := db.connect()
+	if err != nil {
+		return err
+	}
+
+	_, err = db.GetBooks()
+	if err != nil {
+		return err
+	}
+
+	_, err = db.GetCategories()
+	if err != nil {
+		return err
+	}
+
+	return nil
+
+}
+
 func (db *DB) connect() error {
 	conf, err := db.configProvider.GetConfig()
 	driver, connectionString, err := getConnectionInfo(conf)
@@ -78,16 +98,6 @@ func (db *DB) connect() error {
 	err = db.conn.Ping()
 	if err != nil {
 		db.conn = nil
-		return err
-	}
-
-	_, err = db.GetBooks()
-	if err != nil {
-		return err
-	}
-
-	_, err = db.GetCategories()
-	if err != nil {
 		return err
 	}
 
@@ -233,7 +243,7 @@ func (db *DB) GetSalesRanks(bookName string,
 							start *time.Time,
 							end *time.Time) ([]SalesRank, error) {
 	if db.conn == nil {
-		err := db.connect()
+		err := db.init()
 		if err != nil {
 			return nil, err
 		}

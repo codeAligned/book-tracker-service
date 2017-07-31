@@ -3,5 +3,7 @@ import:
 - package: github.com/jmoiron/sqlx
 - package: github.com/mattn/go-sqlite3
   version: v1.2.0
+- package: github.com/graphql-go/graphql
+  version: v0.7.0
 testImport:
 - package: github.com/onsi/gomega

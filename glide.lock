@@ -1,19 +1,28 @@
-hash: 9f8e4810c0303c90b6559bf7bd159b6240891bb9e0fb1ff34b904db7077017b2
-updated: 2017-07-16T12:12:11.213918413-07:00
+hash: c96b5ad6739b6e8d095120dae70d704e6af549faa10141750c8d8614bc8c9564
+updated: 2017-07-23T09:56:49.285908231-07:00
 imports:
+- name: github.com/graphql-go/graphql
+  version: 096f5bcc1783445c20d5b81af176ffb930001cff
 - name: github.com/jmoiron/sqlx
-  version: d9bd385d68c068f1fabb5057e3dedcbcbb039d0f
+  version: 3564e3a314b957a161fefa0e7aea85b4d741c94e
   subpackages:
   - reflectx
+- name: github.com/lib/pq
+  version: dd1fe2071026ce53f36a39112e645b4d4f5793a4
+  subpackages:
+  - oid
 - name: github.com/mattn/go-sqlite3
   version: ca5e3819723d8eeaf170ad510e7da1d6d2e94a08
 - name: golang.org/x/net
-  version: b3756b4b77d7b13260a0a2ec658753cf48922eac
+  version: 62685c2d7ca23c807425dca88b11a3e2323dab41
   subpackages:
   - context
+  - html
+  - html/atom
+  - html/charset
 testImports:
 - name: github.com/onsi/gomega
-  version: 334b8f472b3af5d541c5642701c1e29e2126f486
+  version: 39a54bd3c3bbfe1c331a9b3207e92134c77ed812
   subpackages:
   - format
   - internal/assertion
@@ -26,5 +35,23 @@ testImports:
   - matchers/support/goraph/node
   - matchers/support/goraph/util
   - types
+- name: golang.org/x/text
+  version: 9e2f80a6ba7ed4ba13e0cd4b1f094bf916875735
+  subpackages:
+  - encoding
+  - encoding/charmap
+  - encoding/htmlindex
+  - encoding/internal
+  - encoding/internal/identifier
+  - encoding/japanese
+  - encoding/korean
+  - encoding/simplifiedchinese
+  - encoding/traditionalchinese
+  - encoding/unicode
+  - internal/tag
+  - internal/utf8internal
+  - language
+  - runes
+  - transform
 - name: gopkg.in/yaml.v2
-  version: 3b4ad1db5b2a649883ff3782f5f9f6fb52be71af
+  version: f7716cbe52baa25d2e9b0d0da546fcf909fc16b4
